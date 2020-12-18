@@ -1,0 +1,41 @@
+<html lang="ru">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Restaurant</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    </head>
+<body class="layout center-block">
+    {{> header}}
+    <main>{{{body}}}</main>
+    {{> footer}}
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js" type="text/javascript"></script>
+<script>
+    $('#phone').mask("+7(999)999-99-99");
+</script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+<script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js"></script>
+<script>
+    flatpickr.localize(flatpickr.l10ns.ru);
+    flatpickr('#date', {
+        locale: {
+            firstDayOfWeek: 2,
+        }
+    });
+    $('#date').flatpickr({
+        dateFormat: "d.m.Y",
+        minDate: "today",
+    });
+    $('#timeDate').flatpickr({
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        time_24hr: true,
+        minTime: "11:00",
+        maxTime: "22:00",
+    });
+</script>
+</html>

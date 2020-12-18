@@ -1,0 +1,17 @@
+<p class="lead">Мы открыты для вас каждый день с 11 до 23</p>
+<h3>Свободные столики</h3>
+<ul class="table__list list-unstyled list-inline">
+  {{#each items}}
+  <li>
+      <header class="table__numb"><strong>Номер столика: {{numb}}</strong></header>
+      <section class="description">
+          Тип: {{comfort}}<br>
+          Рассчитан на {{capacity}} человека<br>
+          Этаж: {{floor}}<br>
+      </section>
+    <a href="/buy/{{numb}}" class="link action">
+      Заказать
+    </a>
+  </li>
+  {{/each}}
+</ul>

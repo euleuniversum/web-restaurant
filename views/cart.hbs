@@ -1,0 +1,15 @@
+<section class="lead">
+    Имя: {{username}}<br>
+    Телефон: {{phone}}
+</section>
+<ul class="table__list">
+    {{#each items}}
+    <li>
+        <div class="table__numb">Столик № {{table}}</div>
+        <div>на <strong>{{date}}</strong></div>
+        <div>в {{time}}</div>
+        <div>код подтверждения: {{code}}</div>
+    </li>
+    {{/each}}
+</ul>
+
